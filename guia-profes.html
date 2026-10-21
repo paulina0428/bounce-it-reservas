@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guía para profes · Bounce It! Studio</title>
+<meta name="description" content="Cómo usar la app de Bounce It! Studio si eres profe: tus clases, el salón, anotarte a clases, registrar lo que dictaste y tu cuenta.">
+<meta name="theme-color" content="#231739">
+<meta property="og:title" content="Guía para profes · Bounce It! Studio">
+<meta property="og:description" content="Todo lo que necesitas como profe, desde tu celular.">
+<meta property="og:type" content="website">
+<link rel="icon" href="icono-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#231739; --crema:#F9EDF9; --lilabg:#F7D6FF;
+  --morado:#592E83; --lilaazul:#9281D3; --lila:#D4A0EF; --magenta:#A9389B;
+  --tinta-2:#5c5069; --tinta-3:#8d8299; --linea:#ebdff1;
+  --morado-suave:#EFE4F7; --alerta:#9c5407; --alerta-suave:#fbeedd;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,
+  Helvetica,Arial,sans-serif;color:var(--tinta);background:var(--crema);
+  font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%}
+.envoltura{max-width:640px;margin:0 auto;padding:0 20px 60px}
+
+/* ---------- portada ---------- */
+.hero{background:var(--tinta);color:var(--crema);margin:0 -20px 26px;
+  padding:38px 24px 32px;text-align:center;
+  padding-top:calc(38px + env(safe-area-inset-top))}
+.hero .ico{width:64px;height:64px;margin:0 auto 14px;display:block}
+.hero .studio{font-size:11px;letter-spacing:.42em;font-weight:700;
+  color:var(--lila);text-transform:uppercase;margin-bottom:4px}
+.hero h1{font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1.05;
+  text-transform:uppercase}
+.hero .regla{width:64px;height:5px;background:var(--magenta);border-radius:9px;
+  margin:16px auto}
+.hero p{color:rgba(249,237,249,.82);font-size:15px;max-width:30em;margin:0 auto}
+
+/* ---------- el link, que es lo que más se toca ---------- */
+.linkapp{display:block;background:var(--magenta);color:#fff;text-decoration:none;
+  border-radius:16px;padding:16px 20px;text-align:center;margin:20px 0;
+  box-shadow:0 6px 20px rgba(169,56,155,.28)}
+.linkapp span{display:block;font-size:11.5px;letter-spacing:.22em;font-weight:700;
+  text-transform:uppercase;opacity:.85;margin-bottom:3px}
+.linkapp b{font-size:18px;font-weight:800;letter-spacing:-.01em;word-break:break-word}
+.linkapp:active{transform:translateY(1px)}
+
+/* ---------- índice ---------- */
+.indice{background:#fff;border-radius:18px;padding:8px;margin-bottom:26px;
+  box-shadow:0 1px 2px rgba(35,23,57,.05), 0 8px 24px rgba(35,23,57,.07)}
+.indice a{display:flex;align-items:center;gap:12px;padding:11px 12px;
+  text-decoration:none;color:var(--tinta);border-radius:12px}
+.indice a+a{border-top:1px solid var(--linea)}
+.indice a:active{background:var(--morado-suave)}
+.indice b{flex:0 0 auto;width:26px;height:26px;border-radius:50%;
+  background:var(--morado-suave);color:var(--morado);font-size:12.5px;
+  font-weight:800;display:grid;place-items:center}
+.indice span{font-size:15px;font-weight:600}
+
+/* ---------- secciones ---------- */
+section{background:#fff;border-radius:18px;padding:22px;margin-bottom:16px;
+  box-shadow:0 1px 2px rgba(35,23,57,.05), 0 8px 24px rgba(35,23,57,.07);
+  scroll-margin-top:14px}
+section h2{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:800;
+  letter-spacing:-.01em;line-height:1.2;margin-bottom:14px}
+section h2 .num{flex:0 0 auto;width:30px;height:30px;border-radius:50%;
+  background:var(--magenta);color:#fff;font-size:14px;display:grid;place-items:center}
+section p{margin-bottom:12px}
+section p:last-of-type{margin-bottom:0}
+h3.sub{font-size:16px;font-weight:700;color:var(--morado);margin:18px 0 8px}
+ul,ol{margin:0 0 12px 20px}
+li{margin-bottom:5px}
+strong{font-weight:700}
+a{color:var(--morado)}
+blockquote{background:var(--morado-suave);border-radius:12px;padding:13px 16px;
+  margin:14px 0;font-size:15px}
+blockquote strong{color:var(--morado)}
+blockquote p:last-child{margin-bottom:0}
+
+/* Las tablas se salen del ancho de un celular: se dejan rodar de lado */
+.tabla{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:340px}
+th{background:var(--tinta);color:var(--crema);text-align:left;padding:9px 12px;
+  font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+th:first-child{border-radius:10px 0 0 0} th:last-child{border-radius:0 10px 0 0}
+td{padding:10px 12px;border-bottom:1px solid var(--linea);vertical-align:top}
+tbody tr:nth-child(even){background:#FBF6FD}
+
+/* ---------- preguntas frecuentes ---------- */
+details{border-top:1px solid var(--linea)}
+details:first-of-type{border-top:0}
+summary{padding:13px 30px 13px 0;font-weight:700;font-size:15.5px;cursor:pointer;
+  list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:11px;font-size:20px;
+  font-weight:700;color:var(--morado);line-height:1}
+details[open] summary::after{content:"–"}
+details > *:not(summary){padding-bottom:13px;color:var(--tinta-2)}
+
+.arriba{display:inline-block;margin-top:16px;font-size:13px;font-weight:600;
+  color:var(--lilaazul);text-decoration:none}
+
+.pie{text-align:center;padding:26px 10px 0;color:var(--tinta-3);font-size:14px}
+.pie b{display:block;color:var(--morado);font-size:16px;margin-top:6px}
+</style>
+</head><body id="top">
+<div class="envoltura">
+  <header class="hero">
+    <svg class="ico" viewBox="0 0 393.8 396.1" fill="#F9EDF9"><path d="M99.42 314.64L100.62 315.61C100.74 315.71 100.88 315.82 101.06 315.94C101.23 316.06 101.42 316.14 101.62 316.19C101.82 316.25 102.04 316.24 102.27 316.18C102.50 316.12 102.72 315.96 102.94 315.68C103.15 315.42 103.26 315.18 103.27 314.96C103.29 314.73 103.25 314.53 103.15 314.36C103.06 314.18 102.93 314.01 102.78 313.87C102.62 313.72 102.47 313.59 102.34 313.49L101.14 312.51L99.42 314.64M95.03 320.07L96.62 321.36C96.73 321.45 96.89 321.56 97.09 321.70C97.29 321.85 97.51 321.95 97.76 322.01C98.01 322.06 98.28 322.06 98.55 322.00C98.83 321.94 99.10 321.74 99.37 321.41C99.61 321.11 99.74 320.83 99.74 320.57C99.74 320.31 99.69 320.07 99.57 319.85C99.45 319.63 99.30 319.44 99.12 319.27C98.93 319.10 98.78 318.97 98.65 318.86L97.05 317.57L95.03 320.07M100.38 306.81L104.47 310.12C105.03 310.58 105.51 310.99 105.90 311.37C106.29 311.74 106.61 312.11 106.87 312.48C107.13 312.84 107.32 313.22 107.44 313.61C107.56 314.00 107.62 314.43 107.64 314.90C107.68 315.46 107.60 315.98 107.39 316.47C107.19 316.96 106.93 317.40 106.61 317.79C106.18 318.32 105.64 318.74 104.99 319.03C104.35 319.33 103.63 319.42 102.83 319.30C103.21 319.94 103.42 320.52 103.47 321.06C103.52 321.60 103.48 322.09 103.37 322.51C103.25 322.94 103.10 323.30 102.91 323.59C102.72 323.89 102.56 324.11 102.44 324.26C101.99 324.82 101.45 325.28 100.80 325.66C100.16 326.04 99.50 326.24 98.81 326.25C98.29 326.26 97.83 326.23 97.42 326.17C97.02 326.11 96.62 325.99 96.22 325.80C95.83 325.61 95.42 325.37 94.99 325.06C94.56 324.76 94.07 324.38 93.51 323.92L89.29 320.51L100.38 306.81Z" fill-rule="nonzero"/><path d="M109.89 325.18C109.52 325.76 109.26 326.37 109.10 327.01C108.95 327.66 108.91 328.29 108.99 328.92C109.08 329.55 109.28 330.14 109.61 330.70C109.94 331.26 110.41 331.74 111.03 332.14C111.68 332.55 112.34 332.78 113.00 332.81C113.66 332.85 114.29 332.75 114.88 332.53C115.47 332.30 116.01 331.99 116.50 331.58C116.98 331.18 117.38 330.74 117.69 330.25C118.00 329.77 118.23 329.22 118.40 328.60C118.57 327.99 118.63 327.36 118.59 326.72C118.55 326.08 118.37 325.47 118.06 324.88C117.74 324.29 117.25 323.78 116.59 323.36C115.95 322.95 115.31 322.72 114.65 322.66C114.00 322.60 113.37 322.67 112.78 322.87C112.18 323.08 111.63 323.38 111.14 323.79C110.64 324.20 110.22 324.66 109.89 325.18M108.66 320.24C109.17 319.89 109.78 319.55 110.51 319.25C111.23 318.94 112.04 318.73 112.92 318.63C113.80 318.52 114.73 318.56 115.71 318.76C116.69 318.95 117.69 319.37 118.70 320.02C119.80 320.72 120.69 321.58 121.35 322.59C122.02 323.60 122.47 324.67 122.70 325.81C122.92 326.94 122.92 328.10 122.70 329.27C122.48 330.45 122.04 331.55 121.38 332.58C120.72 333.61 119.90 334.48 118.93 335.17C117.95 335.87 116.90 336.35 115.78 336.63C114.66 336.90 113.50 336.94 112.30 336.76C111.10 336.58 109.94 336.13 108.83 335.42C107.70 334.70 106.81 333.82 106.15 332.80C105.49 331.77 105.05 330.70 104.84 329.57C104.63 328.45 104.63 327.32 104.84 326.18C105.05 325.05 105.47 324.01 106.07 323.06C106.39 322.56 106.76 322.07 107.18 321.58C107.60 321.10 108.09 320.65 108.66 320.24Z" fill-rule="nonzero"/><path d="M131.61 327.78L126.97 337.36C126.84 337.63 126.70 337.95 126.56 338.31C126.41 338.67 126.33 339.04 126.31 339.41C126.28 339.77 126.35 340.13 126.52 340.47C126.69 340.82 127.01 341.11 127.50 341.35C127.98 341.58 128.40 341.66 128.76 341.60C129.11 341.53 129.43 341.38 129.70 341.14C129.97 340.90 130.20 340.61 130.39 340.26C130.59 339.92 130.76 339.58 130.91 339.27L135.56 329.69L139.49 331.59L134.84 341.17C134.51 341.85 134.19 342.41 133.89 342.87C133.58 343.33 133.27 343.71 132.96 344.02C132.65 344.33 132.32 344.58 132.00 344.79C131.67 344.99 131.31 345.16 130.94 345.29C130.19 345.58 129.38 345.71 128.53 345.67C127.67 345.64 126.77 345.39 125.81 344.92C125.53 344.79 125.22 344.61 124.85 344.38C124.50 344.15 124.14 343.88 123.80 343.56C123.46 343.25 123.14 342.88 122.86 342.47C122.57 342.06 122.35 341.60 122.21 341.08C122.06 340.57 121.97 340.10 121.93 339.67C121.90 339.23 121.91 338.80 121.98 338.38C122.05 337.95 122.17 337.51 122.35 337.04C122.53 336.57 122.76 336.04 123.04 335.45L127.69 325.87L131.61 327.78Z" fill-rule="nonzero"/><path d="M141.76 332.59L145.31 333.84L147.84 346.48L147.90 346.46L151.40 336.00L155.34 337.39L149.46 354.01L145.89 352.75L143.33 340.47L143.28 340.48L139.82 350.60L135.88 349.20L141.76 332.59Z" fill-rule="nonzero"/><path d="M171.90 352.55C171.43 353.52 170.84 354.36 170.13 355.07C169.41 355.78 168.62 356.35 167.75 356.78C166.89 357.21 165.96 357.48 164.97 357.60C163.98 357.73 162.98 357.68 161.98 357.46C160.67 357.17 159.53 356.66 158.56 355.92C157.58 355.19 156.81 354.32 156.22 353.32C155.64 352.32 155.25 351.24 155.06 350.07C154.87 348.89 154.90 347.73 155.16 346.56C155.40 345.46 155.84 344.43 156.47 343.45C157.10 342.48 157.89 341.65 158.83 340.98C159.76 340.31 160.83 339.83 162.02 339.55C163.22 339.27 164.50 339.28 165.87 339.58C167.18 339.87 168.28 340.36 169.19 341.05C170.09 341.73 170.82 342.49 171.37 343.33C171.91 344.17 172.30 345.03 172.53 345.93C172.76 346.83 172.86 347.62 172.83 348.31L168.37 347.33C168.32 346.98 168.23 346.60 168.09 346.21C167.94 345.81 167.74 345.43 167.48 345.06C167.21 344.69 166.87 344.36 166.46 344.07C166.06 343.77 165.57 343.57 165.00 343.44C164.27 343.28 163.61 343.29 162.99 343.46C162.38 343.64 161.83 343.92 161.34 344.30C160.86 344.69 160.45 345.17 160.12 345.73C159.79 346.29 159.56 346.87 159.43 347.48C159.28 348.13 159.25 348.79 159.32 349.44C159.40 350.10 159.57 350.72 159.85 351.28C160.13 351.85 160.51 352.33 161.01 352.74C161.50 353.15 162.09 353.43 162.78 353.59C163.44 353.73 164.04 353.73 164.58 353.59C165.11 353.45 165.58 353.25 165.96 352.99C166.35 352.74 166.67 352.47 166.91 352.19C167.15 351.91 167.33 351.70 167.44 351.56L171.90 352.55Z" fill-rule="nonzero"/><path d="M176.04 341.84L185.47 342.90L185.03 346.83L179.75 346.23L179.45 348.96L184.56 349.53L184.12 353.46L179.01 352.88L178.67 355.89L183.95 356.48L183.50 360.41L174.08 359.35L176.04 341.84Z" fill-rule="nonzero"/><path d="M194.79 343.29L199.15 343.23L199.39 360.85L195.03 360.91L194.79 343.29Z" fill-rule="nonzero"/><path d="M204.49 347.03L201.13 347.25L200.87 343.31L211.93 342.59L212.19 346.53L208.85 346.75L209.73 360.39L205.38 360.68L204.49 347.03Z" fill-rule="nonzero"/><path d="M219.96 359.26L216.05 359.77L215.52 355.76L219.44 355.25L219.96 359.26M219.21 353.50L215.30 354.01L213.77 342.29L217.69 341.78L219.21 353.50Z" fill-rule="nonzero"/><path d="M235.48 343.39C235.41 343.26 235.34 343.10 235.25 342.92C235.17 342.74 235.05 342.57 234.90 342.42C234.75 342.27 234.57 342.16 234.35 342.09C234.14 342.02 233.86 342.03 233.54 342.11C233.16 342.21 232.86 342.42 232.62 342.74C232.39 343.06 232.32 343.42 232.42 343.82C232.49 344.08 232.58 344.29 232.70 344.44C232.82 344.59 233.02 344.72 233.31 344.84C233.60 344.95 234.00 345.06 234.50 345.17C235.01 345.28 235.68 345.41 236.51 345.56C237.37 345.72 238.10 345.92 238.70 346.16C239.29 346.40 239.78 346.69 240.18 347.01C240.57 347.34 240.88 347.71 241.10 348.12C241.32 348.53 241.50 348.98 241.62 349.47C241.78 350.10 241.84 350.75 241.81 351.43C241.77 352.10 241.60 352.74 241.27 353.34C240.95 353.95 240.46 354.51 239.80 355.01C239.14 355.51 238.27 355.90 237.18 356.18C235.99 356.48 234.96 356.55 234.09 356.39C233.22 356.22 232.50 355.93 231.91 355.50C231.33 355.08 230.87 354.57 230.54 353.98C230.21 353.40 229.97 352.83 229.83 352.27L229.69 351.72L233.90 350.65C234.02 351.14 234.19 351.53 234.39 351.80C234.60 352.08 234.81 352.28 235.04 352.40C235.27 352.52 235.49 352.58 235.70 352.59C235.91 352.59 236.08 352.58 236.21 352.54C236.72 352.41 237.07 352.14 237.26 351.72C237.46 351.30 237.51 350.89 237.40 350.49C237.33 350.22 237.22 349.99 237.08 349.82C236.93 349.64 236.71 349.50 236.42 349.39C236.13 349.29 235.76 349.19 235.29 349.10C234.82 349.02 234.23 348.92 233.52 348.80C233.19 348.76 232.77 348.68 232.26 348.57C231.75 348.46 231.23 348.28 230.70 348.01C230.17 347.74 229.68 347.36 229.22 346.87C228.76 346.38 228.43 345.74 228.23 344.94C228.02 344.14 228.02 343.38 228.20 342.67C228.38 341.96 228.70 341.32 229.14 340.75C229.58 340.18 230.12 339.69 230.75 339.30C231.38 338.90 232.04 338.61 232.74 338.43C233.56 338.22 234.42 338.17 235.31 338.28C236.21 338.39 237.01 338.71 237.71 339.23C238.03 339.48 238.29 339.74 238.51 340.00C238.73 340.27 238.91 340.53 239.06 340.80C239.21 341.06 239.32 341.32 239.41 341.58C239.50 341.84 239.59 342.08 239.66 342.33L235.48 343.39Z" fill-rule="nonzero"/><path d="M243.36 339.81L240.18 340.91L238.89 337.17L249.36 333.56L250.65 337.30L247.49 338.39L251.95 351.32L247.82 352.74L243.36 339.81Z" fill-rule="nonzero"/><path d="M254.56 331.33L258.94 341.03C259.07 341.31 259.22 341.62 259.41 341.96C259.60 342.30 259.83 342.60 260.09 342.85C260.36 343.11 260.68 343.28 261.05 343.37C261.42 343.47 261.85 343.40 262.35 343.18C262.84 342.96 263.17 342.69 263.35 342.38C263.53 342.06 263.61 341.72 263.60 341.36C263.59 341.00 263.51 340.63 263.37 340.26C263.23 339.89 263.08 339.55 262.94 339.23L258.56 329.53L262.53 327.73L266.92 337.43C267.22 338.11 267.45 338.72 267.61 339.25C267.77 339.78 267.86 340.26 267.90 340.70C267.93 341.14 267.93 341.55 267.87 341.93C267.82 342.31 267.72 342.69 267.59 343.06C267.32 343.83 266.90 344.53 266.33 345.16C265.75 345.79 264.98 346.33 264.02 346.77C263.73 346.89 263.39 347.02 262.99 347.15C262.58 347.28 262.15 347.38 261.69 347.44C261.22 347.50 260.74 347.51 260.24 347.47C259.74 347.42 259.25 347.29 258.76 347.08C258.27 346.86 257.85 346.63 257.50 346.38C257.14 346.13 256.82 345.84 256.54 345.52C256.25 345.19 255.99 344.81 255.74 344.37C255.49 343.94 255.24 343.42 254.97 342.83L250.59 333.13L254.56 331.33Z" fill-rule="nonzero"/><path d="M275.28 336.26L276.89 335.31C277.60 334.89 278.11 334.43 278.44 333.93C278.76 333.42 278.95 332.90 278.99 332.35C279.04 331.81 278.97 331.25 278.78 330.68C278.60 330.11 278.34 329.55 278.03 329.02C277.77 328.58 277.44 328.15 277.04 327.71C276.64 327.27 276.18 326.92 275.65 326.63C275.45 326.53 275.22 326.44 274.96 326.37C274.70 326.29 274.42 326.25 274.12 326.26C273.81 326.26 273.48 326.31 273.12 326.41C272.76 326.52 272.38 326.69 271.97 326.93L270.34 327.89L275.28 336.26M264.57 326.71L269.44 323.83C269.85 323.59 270.34 323.32 270.91 323.02C271.47 322.73 272.10 322.49 272.80 322.32C273.49 322.15 274.24 322.08 275.05 322.12C275.86 322.16 276.71 322.39 277.61 322.82C278.54 323.25 279.34 323.80 280.01 324.48C280.68 325.15 281.26 325.91 281.75 326.74C282.36 327.78 282.81 328.84 283.09 329.92C283.37 331.00 283.42 332.06 283.23 333.11C283.05 334.16 282.59 335.17 281.87 336.15C281.14 337.12 280.08 338.02 278.69 338.84L273.54 341.88L264.57 326.71Z" fill-rule="nonzero"/><path d="M279.04 317.81L282.61 315.29L292.76 329.70L289.20 332.21L279.04 317.81Z" fill-rule="nonzero"/><path d="M293.34 318.20C293.78 318.72 294.29 319.15 294.86 319.49C295.43 319.83 296.02 320.06 296.65 320.16C297.27 320.27 297.90 320.25 298.53 320.10C299.16 319.95 299.76 319.64 300.32 319.16C300.91 318.67 301.32 318.11 301.55 317.49C301.78 316.87 301.87 316.24 301.84 315.61C301.79 314.98 301.65 314.37 301.41 313.78C301.17 313.20 300.86 312.69 300.49 312.25C300.12 311.82 299.67 311.42 299.13 311.08C298.59 310.74 298.01 310.49 297.38 310.34C296.76 310.19 296.12 310.18 295.47 310.31C294.81 310.44 294.18 310.75 293.58 311.26C293.01 311.75 292.59 312.29 292.34 312.90C292.09 313.51 291.97 314.13 291.99 314.76C292.01 315.39 292.14 316.00 292.38 316.60C292.62 317.19 292.94 317.73 293.34 318.20M288.26 317.91C288.07 317.32 287.93 316.64 287.85 315.85C287.77 315.07 287.81 314.24 287.97 313.37C288.13 312.49 288.45 311.62 288.93 310.74C289.40 309.86 290.10 309.03 291.01 308.26C292.01 307.41 293.09 306.82 294.26 306.48C295.42 306.14 296.58 306.03 297.73 306.15C298.88 306.27 299.98 306.61 301.04 307.17C302.10 307.74 303.02 308.48 303.81 309.42C304.60 310.35 305.18 311.39 305.56 312.52C305.94 313.66 306.09 314.81 306.01 315.96C305.94 317.11 305.64 318.23 305.11 319.33C304.58 320.42 303.81 321.39 302.80 322.24C301.78 323.11 300.68 323.70 299.51 324.03C298.33 324.36 297.18 324.46 296.04 324.33C294.90 324.19 293.82 323.86 292.80 323.32C291.78 322.78 290.91 322.08 290.18 321.22C289.80 320.77 289.44 320.27 289.10 319.73C288.76 319.18 288.48 318.58 288.26 317.91Z" fill-rule="nonzero"/><path d="M97.19 84.12L98.85 82.91C98.96 82.83 99.11 82.71 99.30 82.55C99.49 82.39 99.65 82.20 99.77 81.97C99.89 81.75 99.96 81.49 99.97 81.21C99.98 80.93 99.86 80.61 99.61 80.26C99.38 79.96 99.15 79.77 98.89 79.69C98.64 79.62 98.39 79.62 98.15 79.68C97.91 79.73 97.68 79.83 97.48 79.96C97.27 80.09 97.09 80.21 96.96 80.31L95.30 81.52L97.19 84.12M93.08 78.48L94.33 77.56C94.46 77.47 94.60 77.36 94.76 77.23C94.92 77.09 95.05 76.93 95.15 76.75C95.25 76.56 95.31 76.35 95.31 76.12C95.31 75.88 95.20 75.62 95.00 75.34C94.80 75.07 94.60 74.90 94.38 74.83C94.17 74.76 93.97 74.75 93.77 74.79C93.57 74.84 93.38 74.92 93.20 75.03C93.02 75.14 92.86 75.25 92.72 75.35L91.47 76.26L93.08 78.48M85.77 75.52L90.02 72.43C90.60 72.00 91.13 71.65 91.59 71.37C92.06 71.09 92.50 70.87 92.92 70.72C93.33 70.56 93.75 70.47 94.16 70.46C94.57 70.45 95.00 70.49 95.45 70.59C96.01 70.70 96.49 70.92 96.91 71.24C97.33 71.57 97.68 71.93 97.98 72.34C98.39 72.90 98.65 73.52 98.76 74.22C98.88 74.92 98.78 75.64 98.47 76.38C99.18 76.18 99.80 76.13 100.33 76.22C100.87 76.31 101.32 76.47 101.70 76.69C102.09 76.92 102.40 77.16 102.63 77.42C102.87 77.68 103.04 77.88 103.15 78.04C103.58 78.61 103.89 79.26 104.09 79.98C104.28 80.70 104.30 81.39 104.14 82.06C104.02 82.57 103.87 83.01 103.70 83.38C103.54 83.76 103.32 84.11 103.04 84.44C102.75 84.78 102.41 85.11 102.01 85.44C101.60 85.78 101.11 86.16 100.52 86.58L96.14 89.77L85.77 75.52Z" fill-rule="nonzero"/><path d="M106.77 71.63C107.11 72.22 107.54 72.73 108.04 73.16C108.54 73.60 109.09 73.92 109.68 74.14C110.28 74.35 110.90 74.44 111.55 74.40C112.19 74.37 112.84 74.16 113.47 73.79C114.14 73.41 114.64 72.93 114.98 72.36C115.31 71.79 115.51 71.19 115.58 70.56C115.66 69.93 115.62 69.30 115.49 68.69C115.35 68.07 115.14 67.51 114.85 67.02C114.56 66.52 114.18 66.06 113.71 65.63C113.24 65.20 112.71 64.85 112.12 64.59C111.54 64.34 110.91 64.22 110.24 64.23C109.57 64.24 108.90 64.44 108.22 64.84C107.57 65.22 107.06 65.68 106.71 66.24C106.35 66.79 106.13 67.38 106.04 68.00C105.95 68.63 105.97 69.25 106.10 69.88C106.24 70.51 106.46 71.09 106.77 71.63M101.82 70.46C101.73 69.84 101.72 69.15 101.78 68.36C101.83 67.57 102.02 66.76 102.33 65.93C102.64 65.10 103.10 64.29 103.72 63.51C104.34 62.73 105.17 62.03 106.21 61.43C107.34 60.77 108.51 60.38 109.72 60.25C110.92 60.12 112.08 60.21 113.19 60.53C114.30 60.85 115.33 61.38 116.27 62.11C117.22 62.85 118.00 63.75 118.61 64.80C119.22 65.86 119.62 66.98 119.79 68.17C119.96 69.35 119.91 70.51 119.64 71.63C119.37 72.75 118.87 73.81 118.16 74.79C117.45 75.77 116.53 76.59 115.38 77.26C114.22 77.93 113.04 78.33 111.82 78.44C110.61 78.56 109.46 78.46 108.36 78.13C107.26 77.80 106.26 77.28 105.35 76.57C104.43 75.86 103.70 75.02 103.13 74.05C102.84 73.54 102.57 72.99 102.33 72.39C102.09 71.79 101.92 71.15 101.82 70.46Z" fill-rule="nonzero"/><path d="M121.79 53.70L126.12 63.43C126.25 63.71 126.40 64.02 126.59 64.36C126.77 64.70 127.00 65.00 127.26 65.26C127.53 65.51 127.85 65.69 128.22 65.78C128.59 65.88 129.02 65.82 129.51 65.60C130.00 65.38 130.34 65.11 130.52 64.80C130.70 64.48 130.79 64.15 130.78 63.78C130.77 63.42 130.69 63.06 130.55 62.68C130.41 62.31 130.27 61.97 130.13 61.65L125.80 51.92L129.79 50.15L134.12 59.87C134.42 60.56 134.65 61.16 134.80 61.70C134.95 62.23 135.04 62.71 135.08 63.15C135.11 63.58 135.10 63.99 135.04 64.38C134.99 64.76 134.89 65.13 134.75 65.51C134.49 66.27 134.06 66.97 133.48 67.60C132.91 68.23 132.13 68.76 131.16 69.19C130.88 69.32 130.54 69.44 130.13 69.57C129.73 69.70 129.29 69.79 128.83 69.85C128.37 69.91 127.88 69.92 127.38 69.87C126.88 69.82 126.39 69.69 125.91 69.47C125.42 69.25 125.00 69.02 124.65 68.77C124.29 68.52 123.97 68.23 123.69 67.90C123.41 67.58 123.15 67.19 122.90 66.75C122.66 66.32 122.40 65.80 122.14 65.20L117.81 55.48L121.79 53.70Z" fill-rule="nonzero"/><path d="M134.12 48.44L137.70 47.27L147.42 55.74L147.45 55.68L143.84 45.26L147.81 43.96L153.30 60.71L149.70 61.89L140.18 53.73L140.14 53.76L143.58 63.89L139.61 65.19L134.12 48.44Z" fill-rule="nonzero"/><path d="M171.34 50.02C171.31 51.10 171.12 52.11 170.75 53.05C170.39 53.99 169.90 54.83 169.28 55.58C168.67 56.32 167.93 56.95 167.08 57.47C166.23 57.99 165.30 58.35 164.29 58.56C162.98 58.83 161.73 58.83 160.54 58.56C159.35 58.28 158.29 57.81 157.35 57.14C156.41 56.46 155.61 55.63 154.96 54.64C154.31 53.65 153.86 52.57 153.62 51.40C153.39 50.30 153.36 49.17 153.54 48.03C153.72 46.88 154.10 45.81 154.68 44.81C155.26 43.81 156.04 42.94 157.01 42.20C157.99 41.45 159.17 40.94 160.54 40.65C161.85 40.38 163.06 40.38 164.16 40.63C165.27 40.89 166.24 41.29 167.09 41.83C167.93 42.37 168.64 43.00 169.21 43.72C169.78 44.45 170.20 45.13 170.46 45.78L165.98 46.70C165.80 46.40 165.56 46.10 165.27 45.79C164.98 45.49 164.63 45.22 164.24 45.00C163.85 44.77 163.41 44.61 162.91 44.50C162.42 44.40 161.89 44.41 161.32 44.53C160.59 44.68 159.99 44.96 159.50 45.37C159.01 45.78 158.62 46.26 158.34 46.81C158.05 47.37 157.87 47.97 157.80 48.62C157.73 49.26 157.76 49.89 157.88 50.50C158.02 51.15 158.26 51.76 158.59 52.33C158.93 52.90 159.34 53.39 159.83 53.79C160.31 54.19 160.86 54.48 161.48 54.65C162.10 54.82 162.75 54.84 163.44 54.70C164.11 54.56 164.65 54.32 165.08 53.97C165.52 53.62 165.86 53.25 166.10 52.86C166.35 52.46 166.53 52.09 166.64 51.74C166.75 51.38 166.82 51.12 166.86 50.95L171.34 50.02Z" fill-rule="nonzero"/><path d="M172.87 38.84L182.30 37.81L182.73 41.74L177.45 42.32L177.75 45.04L182.87 44.48L183.29 48.42L178.18 48.97L178.50 51.98L183.78 51.41L184.21 55.34L174.78 56.36L172.87 38.84Z" fill-rule="nonzero"/><path d="M193.87 37.32L198.23 37.26L198.47 54.89L194.11 54.94L193.87 37.32Z" fill-rule="nonzero"/><path d="M204.31 41.38L200.94 41.20L201.15 37.25L212.22 37.84L212.01 41.79L208.67 41.61L207.94 55.26L203.58 55.03L204.31 41.38Z" fill-rule="nonzero"/><path d="M217.90 50.38L213.98 49.94L215.30 38.20L219.22 38.64L217.90 50.38M217.25 56.16L213.33 55.72L213.78 51.69L217.70 52.13L217.25 56.16Z" fill-rule="nonzero"/><path d="M236.95 47.03C236.95 46.88 236.96 46.71 236.96 46.51C236.97 46.30 236.94 46.10 236.87 45.90C236.81 45.70 236.70 45.52 236.53 45.36C236.37 45.20 236.13 45.08 235.80 45.01C235.42 44.93 235.06 44.97 234.70 45.15C234.34 45.34 234.12 45.63 234.03 46.03C233.97 46.29 233.96 46.52 234.00 46.71C234.03 46.89 234.16 47.10 234.36 47.34C234.57 47.57 234.87 47.85 235.27 48.18C235.67 48.50 236.21 48.92 236.89 49.43C237.59 49.96 238.15 50.47 238.57 50.95C238.99 51.44 239.30 51.92 239.50 52.38C239.70 52.85 239.81 53.32 239.82 53.79C239.84 54.25 239.79 54.74 239.68 55.23C239.53 55.87 239.29 56.48 238.96 57.06C238.62 57.64 238.17 58.13 237.61 58.53C237.05 58.92 236.36 59.19 235.55 59.35C234.73 59.50 233.78 59.45 232.68 59.20C231.48 58.93 230.53 58.53 229.83 57.99C229.13 57.45 228.62 56.86 228.29 56.21C227.96 55.57 227.78 54.91 227.75 54.24C227.72 53.56 227.77 52.95 227.89 52.39L228.02 51.83L232.25 52.78C232.14 53.28 232.12 53.70 232.17 54.04C232.23 54.37 232.34 54.65 232.49 54.86C232.63 55.07 232.80 55.23 232.98 55.33C233.17 55.43 233.33 55.49 233.46 55.52C233.97 55.63 234.41 55.55 234.77 55.27C235.13 54.98 235.36 54.64 235.45 54.23C235.52 53.96 235.52 53.70 235.47 53.48C235.42 53.26 235.28 53.03 235.08 52.81C234.87 52.58 234.57 52.32 234.20 52.04C233.82 51.75 233.34 51.39 232.76 50.97C232.48 50.78 232.14 50.52 231.74 50.19C231.33 49.86 230.95 49.46 230.60 48.98C230.25 48.51 229.98 47.94 229.79 47.30C229.61 46.66 229.60 45.93 229.79 45.13C229.97 44.32 230.30 43.64 230.79 43.09C231.27 42.54 231.84 42.11 232.49 41.80C233.15 41.49 233.84 41.31 234.59 41.24C235.33 41.17 236.05 41.21 236.76 41.37C237.58 41.55 238.37 41.90 239.12 42.40C239.86 42.90 240.43 43.55 240.82 44.33C240.99 44.70 241.11 45.04 241.19 45.38C241.26 45.71 241.31 46.03 241.32 46.34C241.33 46.64 241.32 46.92 241.28 47.19C241.24 47.46 241.20 47.72 241.16 47.97L236.95 47.03Z" fill-rule="nonzero"/><path d="M246.42 48.28L243.20 47.30L244.36 43.52L254.95 46.76L253.80 50.54L250.60 49.56L246.60 62.63L242.43 61.36L246.42 48.28Z" fill-rule="nonzero"/><path d="M261.95 49.38L257.98 59.26C257.87 59.54 257.76 59.86 257.64 60.24C257.52 60.61 257.47 60.98 257.47 61.35C257.47 61.72 257.57 62.07 257.76 62.40C257.95 62.73 258.29 63.00 258.79 63.20C259.29 63.40 259.72 63.46 260.07 63.37C260.42 63.28 260.72 63.10 260.97 62.84C261.23 62.59 261.44 62.28 261.61 61.92C261.77 61.56 261.92 61.22 262.05 60.89L266.02 51.01L270.07 52.63L266.10 62.51C265.83 63.21 265.55 63.79 265.27 64.27C265.00 64.75 264.72 65.16 264.43 65.49C264.14 65.82 263.84 66.09 263.52 66.32C263.21 66.54 262.87 66.73 262.51 66.90C261.77 67.24 260.98 67.42 260.12 67.44C259.27 67.47 258.35 67.28 257.36 66.89C257.08 66.77 256.75 66.61 256.37 66.41C256.00 66.21 255.63 65.96 255.26 65.67C254.90 65.38 254.56 65.04 254.24 64.65C253.93 64.26 253.68 63.81 253.50 63.31C253.32 62.81 253.19 62.35 253.13 61.92C253.06 61.49 253.04 61.06 253.08 60.63C253.12 60.20 253.21 59.74 253.36 59.26C253.50 58.78 253.69 58.24 253.94 57.63L257.90 47.75L261.95 49.38Z" fill-rule="nonzero"/><path d="M271.60 68.58L273.26 69.45C273.98 69.82 274.64 70.02 275.25 70.03C275.85 70.04 276.39 69.92 276.88 69.67C277.36 69.43 277.80 69.07 278.19 68.61C278.58 68.15 278.92 67.65 279.20 67.10C279.44 66.65 279.64 66.14 279.79 65.57C279.95 65.00 280.02 64.41 279.98 63.82C279.96 63.60 279.91 63.35 279.84 63.09C279.77 62.83 279.65 62.57 279.49 62.32C279.33 62.06 279.11 61.81 278.83 61.56C278.56 61.30 278.21 61.07 277.78 60.85L276.11 59.97L271.60 68.58M274.07 54.44L279.09 57.06C279.51 57.28 279.99 57.56 280.55 57.88C281.10 58.21 281.63 58.62 282.14 59.12C282.65 59.62 283.10 60.22 283.50 60.93C283.89 61.64 284.14 62.49 284.25 63.47C284.38 64.49 284.33 65.46 284.11 66.38C283.89 67.31 283.55 68.20 283.10 69.06C282.54 70.13 281.88 71.06 281.11 71.87C280.34 72.68 279.46 73.28 278.47 73.68C277.48 74.07 276.38 74.22 275.17 74.11C273.96 74.01 272.63 73.58 271.20 72.83L265.90 70.06L274.07 54.44Z" fill-rule="nonzero"/><path d="M290.37 63.35L294.08 65.65L284.78 80.62L281.07 78.32L290.37 63.35Z" fill-rule="nonzero"/><path d="M295.58 77.14C295.18 77.69 294.87 78.28 294.67 78.91C294.47 79.54 294.39 80.17 294.43 80.81C294.47 81.44 294.64 82.04 294.93 82.62C295.22 83.20 295.66 83.71 296.25 84.15C296.87 84.61 297.51 84.88 298.17 84.96C298.82 85.04 299.46 84.99 300.06 84.80C300.67 84.62 301.22 84.34 301.74 83.97C302.25 83.60 302.68 83.19 303.02 82.73C303.36 82.27 303.63 81.73 303.84 81.13C304.05 80.52 304.16 79.90 304.16 79.26C304.16 78.62 304.03 78.00 303.75 77.39C303.47 76.78 303.02 76.24 302.39 75.77C301.78 75.32 301.16 75.05 300.51 74.94C299.86 74.84 299.23 74.87 298.62 75.03C298.01 75.19 297.44 75.46 296.92 75.83C296.40 76.20 295.95 76.64 295.58 77.14M294.69 72.13C295.22 71.80 295.85 71.51 296.60 71.26C297.35 71.00 298.16 70.85 299.05 70.80C299.93 70.75 300.86 70.86 301.83 71.12C302.79 71.38 303.76 71.87 304.72 72.58C305.77 73.36 306.60 74.27 307.20 75.33C307.79 76.38 308.17 77.48 308.32 78.63C308.46 79.77 308.39 80.93 308.08 82.09C307.78 83.25 307.27 84.32 306.54 85.30C305.81 86.28 304.94 87.09 303.92 87.72C302.90 88.35 301.82 88.76 300.68 88.95C299.54 89.15 298.38 89.11 297.20 88.85C296.02 88.59 294.89 88.06 293.83 87.28C292.75 86.48 291.92 85.55 291.33 84.48C290.74 83.41 290.38 82.31 290.24 81.17C290.11 80.04 290.19 78.91 290.48 77.79C290.77 76.67 291.25 75.66 291.92 74.76C292.27 74.28 292.67 73.82 293.12 73.36C293.57 72.91 294.10 72.50 294.69 72.13Z" fill-rule="nonzero"/><path d="M385.31 207.94C389.62 207.81 393.77 205.39 393.78 200.54C393.79 191.01 375.80 190.71 375.77 200.52C375.76 205.55 380.63 208.09 385.31 207.94Z" fill-rule="nonzero"/><path d="M196.87 17.18C288.83 17.18 365.82 86.40 376.49 176.58L393.78 176.58C383.02 76.84 298.25 -0.00 196.87 -0.00C95.28 -0.00 10.72 76.76 -0.03 176.58L17.26 176.58C27.92 86.33 104.72 17.18 196.87 17.18Z" fill-rule="nonzero"/><path d="M196.87 378.95C106.50 378.95 31.01 313.29 17.96 224.89L0.63 224.89C6.86 270.89 29.09 313.22 63.70 344.67C100.21 377.85 147.50 396.13 196.87 396.13C246.58 396.13 294.12 377.64 330.72 344.06C364.98 312.63 386.94 270.58 393.13 224.89L375.78 224.89C362.77 313.40 287.56 378.95 196.87 378.95Z" fill-rule="nonzero"/><path d="M205.34 218.21C207.77 213.46 225.63 214.11 224.70 217.29C221.85 229.15 222.25 252.98 224.19 265.21C224.66 267.78 217.66 268.13 215.96 264.99C210.72 252.97 202.65 230.94 205.34 218.21M196.55 109.25C199.34 104.70 217.10 106.71 215.93 109.82C212.18 121.42 210.76 145.22 211.76 157.55C212.03 160.16 205.02 159.97 203.57 156.71C199.26 144.32 192.90 121.75 196.55 109.25M264.81 195.04C254.08 183.62 240.76 177.98 225.26 177.07C243.44 171.61 256.90 156.35 258.06 137.04C259.22 117.73 252.51 99.26 237.38 87.76C189.24 52.77 112.40 87.71 126.96 147.83C129.63 159.16 143.93 166.18 154.98 163.43C152.83 178.36 151.44 194.85 153.28 209.88C149.83 204.24 142.80 201.58 136.30 202.26C105.93 205.42 98.70 248.10 108.79 274.63C116.74 293.03 129.22 303.88 148.69 313.23C165.72 321.67 199.49 324.73 218.29 320.91C240.07 316.48 259.50 305.18 271.80 287.11C285.09 267.50 287.84 238.35 278.85 216.48C275.87 209.23 270.14 200.71 264.81 195.04Z" fill-rule="nonzero"/></svg>
+    <div class="studio">Studio</div>
+    <h1>Bounce It!</h1>
+    <div class="regla"></div>
+    <p>Guía para profes: quién viene a tus clases, cuándo está libre el salón,
+       cómo registrar lo que dictaste y cómo va tu cuenta.</p>
+  </header>
+
+  <a class="linkapp" href="https://tu-sitio.netlify.app">
+    <span>Abrir la app</span><b>tu-sitio.netlify.app</b></a>
+
+  <nav class="indice"><a href="#s1"><b>1</b><span>Instálala en tu pantalla de inicio</span></a><a href="#s2"><b>2</b><span>Entra con tu cuenta</span></a><a href="#s3"><b>3</b><span>Mis clases</span></a><a href="#s4"><b>4</b><span>El salón</span></a><a href="#s5"><b>5</b><span>Tomar clase</span></a><a href="#s6"><b>6</b><span>Registrar</span></a><a href="#s7"><b>7</b><span>Mi cuenta</span></a><a href="#s8"><b>8</b><span>Reglas</span></a><a href="#s99"><b>?</b><span>Preguntas frecuentes</span></a></nav>
+
+<section id="s1">
+  <h2><span class="num">1</span>Instálala en tu pantalla de inicio</h2>
+  <p>Así te queda como cualquier otra app, con su icono, y no tienes que buscar el
+link cada vez.</p>
+<h3 class="sub">iPhone (Safari)</h3>
+<ol>
+<li>Toca el botón <strong>Compartir</strong> (el cuadrito con la flecha hacia arriba, abajo en
+   el centro).</li>
+<li>Desliza hacia abajo y toca <strong>Agregar a inicio</strong>.</li>
+<li>Toca <strong>Agregar</strong> arriba a la derecha.</li>
+</ol>
+<h3 class="sub">Android (Chrome)</h3>
+<ol>
+<li>Toca los <strong>tres puntitos</strong> ⋮ arriba a la derecha.</li>
+<li>Toca <strong>Agregar a la pantalla principal</strong> (o <strong>Instalar aplicación</strong>).</li>
+<li>Toca <strong>Agregar</strong>.</li>
+</ol>
+<p>Listo: ya tienes el icono de Bounce It! en tu celular.</p>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section><section id="s2">
+  <h2><span class="num">2</span>Entra con tu cuenta</h2>
+  <p>Es la misma app de las alumnas, con el mismo link. Entras con el correo y la
+contraseña de tu cuenta, y como la administración te marcó como <strong>profe</strong>, te
+salen otras pestañas: <strong>Mis clases, Salón, Tomar clase, Registrar, Mi cuenta</strong>
+y <strong>Reglas</strong>.</p>
+<p>Si no te salen esas pestañas, es que tu cuenta todavía está como alumna.
+Escríbele a la administración para que te cambie.</p>
+<blockquote><p><strong>¿Se te olvidó la contraseña?</strong> En la pantalla de entrada toca
+<strong>"¿Olvidaste tu contraseña?"</strong>, escribe tu correo y te llega un link para poner
+una nueva. Nadie en el studio puede ver ni decirte tu contraseña: solo tú la
+cambias.</p></blockquote>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section><section id="s3">
+  <h2><span class="num">3</span>Mis clases: quién viene</h2>
+  <p>Tus clases de los próximos días, y debajo de cada una <strong>quién reservó</strong>.
+El número de la derecha es cuánta gente va.</p>
+<ul>
+<li><strong>Sin cuenta</strong> — alguien que vino a clase suelta sin tener cuenta en la app.</li>
+<li><strong>Profesor</strong> — otra profe que se anotó a tomar tu clase.</li>
+<li><strong>Asistió / Faltó</strong> — lo marca la administración después de la clase.</li>
+</ul>
+<p>Solo ves las clases que tienes asignadas. Si falta alguna tuya, díselo a la
+administración para que te la asigne en el horario.</p>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section><section id="s4">
+  <h2><span class="num">4</span>El salón: cuándo está libre</h2>
+  <p>La semana entera del salón, hora por hora, como un calendario. Las casillas en
+<strong>blanco están libres</strong>. Lo de color está ocupado:</p>
+<div class="tabla"><table><thead><tr><th>Color</th><th>Qué es</th></tr></thead><tbody>
+<tr><td>Lila</td><td>Una clase o un intensivo</td></tr>
+<tr><td>Verde</td><td>Un alquiler confirmado</td></tr>
+<tr><td>Naranja</td><td>Alguien lo apartó y todavía no confirma</td></tr>
+<tr><td>Gris</td><td>Bloqueado por el studio</td></tr>
+</tbody></table></div>
+<p>Con las flechas pasas a otras semanas. No sale el nombre de quién alquiló: solo
+si está libre o no.</p>
+<p>Si quieres una hora para ensayar o para una clase tuya, pídela con el botón
+<strong>Abrir el link</strong> (es el mismo link de alquiler que usa todo el mundo) o
+escríbele a la administración.</p>
+<h3 class="sub">Si tienes tarifa especial: alquílalo tú</h3>
+<p>Si la administración te dio una <strong>tarifa especial de alquiler</strong>, la pestaña
+Salón cambia: arriba dice tu tarifa y el calendario queda en dos colores, <strong>blanco
+libre</strong> y <strong>gris ocupado</strong> (no se ve qué hay ni de quién es).</p>
+<ol>
+<li>Arrastra sobre un hueco en blanco (o tócalo). En el celular, deja el dedo quieto un
+   momento antes de arrastrar.</li>
+<li>Ajusta la hora y cuántas horas (van por horas enteras). El total sale a tu tarifa.</li>
+<li>Escoge <strong>Lo pago</strong> o <strong>Descontarlo de mi pago</strong>, si te lo habilitaron.</li>
+<li>Toca <strong>Apartarlo</strong>. Queda confirmado de una.</li>
+</ol>
+<p>Si lo descuentas, aparece solo en <strong>Mi cuenta</strong> como descuento. Ese descuento no
+se borra a mano: si ya no vas a usar el salón, <strong>cancela el alquiler</strong> (tócalo en el
+calendario o en «Tus alquileres») y el descuento desaparece. Lo puedes cancelar tú hasta
+24 horas antes; después, escríbele a la administración.</p>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section><section id="s5">
+  <h2><span class="num">5</span>Tomar clase: anótate gratis</h2>
+  <p>Como profe puedes <strong>tomar las clases que quieras sin gastar tiquetera</strong>. Toca
+<strong>Anotarme</strong> en la clase y listo.</p>
+<p>Eso sí: <strong>ocupas un cupo</strong>, como cualquier alumna. Si la clase está llena, no
+puedes entrar. Si ya no vas a ir, toca <strong>Cancelar</strong> para liberarle el puesto a
+alguien más.</p>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section><section id="s6">
+  <h2><span class="num">6</span>Registrar lo que dictaste</h2>
+  <p>Después de dictar, la clase te aparece en <strong>Registrar</strong> con el botón
+<strong>Registrar por $…</strong>. Al tocarlo queda sumada a tu cuenta.</p>
+<h3 class="sub">Lo que tienes que saber</h3>
+<ul>
+<li><strong>Primero la administración marca la asistencia.</strong> Hasta que no lo haga, la
+clase dice <em>"La administración todavía no ha marcado la asistencia"</em> y no se puede
+registrar. No es un error: es el orden.</li>
+<li><strong>El valor lo pone la app</strong>, según cuánta gente asistió. Lo ves escrito arriba
+de la lista: a partir de cierto número de personas la clase vale más.</li>
+<li><strong>Si no llegó nadie, no hay clase que registrar.</strong></li>
+<li><strong>Una clase se registra una sola vez.</strong> Si hiciste un reemplazo, la registra
+quien la dictó, y a la otra ya no le aparece.</li>
+<li>La pestaña muestra las clases de los <strong>últimos 15 días</strong> en las que alguien reservó. Regístralas apenas la administración marque la asistencia, para que no se te pasen.</li>
+</ul>
+<h3 class="sub">Descuentos</h3>
+<p>Abajo puedes anotar algo que te van a descontar: una hora de salón que
+alquilaste, una bebida… Queda restado de tu saldo.</p>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section><section id="s7">
+  <h2><span class="num">7</span>Mi cuenta: cuánto llevas</h2>
+  <p>El número grande es tu <strong>saldo a hoy</strong>: lo que el studio te debe. Debajo:
+cuántas clases diste este mes, cuánto generaste y cuánto te descontaron.</p>
+<p>Más abajo está la lista de todo lo registrado, con fecha. Lo que tú registraste
+lo puedes <strong>borrar durante las primeras 48 horas</strong>. Después, pídele el ajuste
+a la administración.</p>
+<p>Cuando te pagan, la administración lo anota y tu saldo baja.</p>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section><section id="s8">
+  <h2><span class="num">8</span>Reglas del equipo</h2>
+  <p>En <strong>Reglas</strong> están los términos del studio, el reglamento de las alumnas, el
+del alquiler del salón y el <strong>reglamento del equipo</strong>, que es el tuyo. Ese último
+solo lo ven las profes y quienes trabajan con el studio.</p>
+<p>Vale la pena conocer el de las alumnas: es lo que ellas aceptaron (cuánto antes
+pueden cancelar, qué pasa si no llegan).</p>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section><section id="s99">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>No me salen las pestañas de profe.</summary><p>Tu cuenta sigue como alumna. La administración la cambia desde tu ficha, en un minuto.</p></details><details><summary>Una clase mía no me aparece en Mis clases.</summary><p>No está asignada a tu cuenta en el horario. Pídele a la administración que te ponga como quien la dicta.</p></details><details><summary>No me deja registrar una clase.</summary><p>Casi siempre es porque la asistencia todavía no está marcada. También puede ser que no llegó nadie, que ya la registró otra profe (reemplazo), o que ya pasaron más de 15 días y no te aparece: en ese caso, pídesela a la administración.</p></details><details><summary>El valor que sale no es el que esperaba.</summary><p>La app lo calcula según la asistencia marcada. Si la asistencia está mal, pídele a la administración que la corrija antes de registrar.</p></details><details><summary>Registré algo mal.</summary><p>Si fue hace menos de 48 horas, bórralo en Mi cuenta y vuelve a registrarlo. Si fue antes, pídele el ajuste a la administración.</p></details><details><summary>¿Puedo alquilar el salón para una clase mía?</summary><p>Sí. Si tienes tarifa especial, apártalo tú misma en Salón y escoge si lo pagas o te lo descuentan. Si no, mira qué horas están libres y pídela por el link de alquiler, o escríbele a la administración.</p></details><details><summary>¿Las alumnas ven mi saldo?</summary><p>No. Tu cuenta solo la ves tú y la administración.</p></details><details><summary>Olvidé mi contraseña.</summary><p>En la pantalla de entrada toca «¿Olvidaste tu contraseña?», escribe tu correo y te llega un link. Revisa también la carpeta de spam.</p></details>
+  <a class="arriba" href="#top">↑ Volver arriba</a>
+</section>
+
+  <div class="pie">Gracias por ser parte del equipo 💜
+    <b>tu-sitio.netlify.app</b></div>
+</div>
+</body></html>
